@@ -1,8 +1,8 @@
 /*
  * @Author: CalabChen
  * @Date: 2024-05-20 09:40:43
- * @LastEditors: CalabChen 14226484+calabchen@user.noreply.gitee.com
- * @LastEditTime: 2024-05-21 23:38:51
+ * @LastEditors: CalabChen
+ * @LastEditTime: 2024-05-24 12:02:37
  * @Description: 米游社 崩坏：星穹铁道 安卓移动端 自动化签到 脚本
  * @version: 1.0.3
  * @app version: 米游社 2.71.1
@@ -18,7 +18,7 @@ function unlock() {
         sleep(500);
         swipe(500, 2000, 500, 1000, 210);
         sleep(500)
-        var password = "XXXXXX"  //这里输入你手机的密码
+        var password = "XXXX"  //这里输入你手机的密码
         for (var i = 0; i < password.length; i++) {
             var p = text(password[i].toString()).findOne().bounds();
             click(p.centerX(), p.centerY());
@@ -95,7 +95,6 @@ function check_in() {
     for (var i = 1; i <= 10; i++) {
         let btn6 = id("com.mihoyo.hyperion:id/likeBtn").findOne(1000);
         btn6.click();
-
         swipe(device.width / 2, device.height / 100 * 43, device.width / 2, device.height / 3 * 2, 200);
         sleep(2000);
     }
